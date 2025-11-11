@@ -1,11 +1,11 @@
-# @x402-bnb/core
+# @q402/core
 
-Core SDK for x402 BNB EIP-7702 delegated payment protocol.
+Core SDK for q402 EIP-7702 delegated payment protocol.
 
 ## Installation
 
 ```bash
-npm install @x402-bnb/core viem
+npm install @q402/core viem
 ```
 
 ## Features
@@ -21,7 +21,7 @@ npm install @x402-bnb/core viem
 ### Client-Side: Creating Payments
 
 ```typescript
-import { createPaymentHeader, prepareWitness, signWitness } from "@x402-bnb/core/client";
+import { createPaymentHeader, prepareWitness, signWitness } from "@q402/core/client";
 import { privateKeyToAccount } from "viem/accounts";
 
 // Create account
@@ -42,7 +42,7 @@ const paymentHeader = await createPaymentHeader(account, paymentDetails);
 ### Server-Side: Verification & Settlement
 
 ```typescript
-import { verifyPayment, settlePayment } from "@x402-bnb/core/facilitator";
+import { verifyPayment, settlePayment } from "@q402/core/facilitator";
 import { createWalletClient } from "viem";
 
 // Verify payment

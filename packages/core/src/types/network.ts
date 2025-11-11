@@ -1,5 +1,5 @@
 /**
- * Supported EVM networks for x402 BNB protocol
+ * Supported EVM networks for q402 protocol
  */
 export const SupportedNetworks = {
   BSC_MAINNET: "bsc-mainnet",

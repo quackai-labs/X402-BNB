@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
-import { decodeBase64, verifyPayment, settlePayment, encodeBase64 } from "@x402-bnb/core";
-import type { SignedPaymentPayload, PaymentExecutionResponse } from "@x402-bnb/core";
-import type { X402BnbMiddlewareConfig } from "./config";
+import { decodeBase64, verifyPayment, settlePayment, encodeBase64 } from "@q402/core";
+import type { SignedPaymentPayload, PaymentExecutionResponse } from "@q402/core";
+import type { Q402MiddlewareConfig } from "./config";
 import { send402Response } from "./handlers";
 
 /**
@@ -15,9 +15,9 @@ const X_PAYMENT_HEADER = "x-payment";
 const X_PAYMENT_RESPONSE_HEADER = "x-payment-response";
 
 /**
- * Create x402 BNB payment middleware for Express
+ * Create q402 payment middleware for Express
  */
-export function createX402BnbMiddleware(config: X402BnbMiddlewareConfig) {
+export function createQ402Middleware(config: Q402MiddlewareConfig) {
   return async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       // Find matching endpoint

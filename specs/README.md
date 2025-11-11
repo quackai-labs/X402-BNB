@@ -1,10 +1,10 @@
-# x402 BNB Protocol Specifications
+# q402 Protocol Specifications
 
-This directory contains the specifications for the x402 BNB protocol, following the [x402 standard](https://github.com/coinbase/x402) with EIP-7702 extensions.
+This directory contains the specifications for the q402 protocol, following the [x402 standard](https://github.com/coinbase/x402) with EIP-7702 extensions.
 
 ## Protocol Overview
 
-x402 BNB extends the x402 payment protocol with EIP-7702 delegated execution, enabling gasless payments on BSC and other EVM networks.
+q402 extends the x402 payment protocol with EIP-7702 delegated execution, enabling gasless payments on BSC and other EVM networks.
 
 ## Specifications
 

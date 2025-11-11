@@ -1,5 +1,5 @@
 /**
- * Hono middleware for x402 BNB EIP-7702 delegated payment protocol
+ * Hono middleware for q402 EIP-7702 delegated payment protocol
  * 
  * @packageDocumentation
  */

@@ -1,7 +1,7 @@
 import type { Address, Hex } from "viem";
 
 /**
- * EIP-712 domain for x402 BNB witness signatures
+ * EIP-712 domain for q402 witness signatures
  */
 export interface Eip712Domain {
   name: string;

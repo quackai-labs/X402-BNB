@@ -1,5 +1,5 @@
 /**
- * Facilitator Client for x402 BNB Protocol
+ * Facilitator Client for q402 Protocol
  * 
  * HTTP client for communicating with facilitator services.
  * This replaces the local facilitator logic in core package.

@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import type { SupportedNetwork } from "@x402-bnb/core";
-import { NetworkConfigs } from "@x402-bnb/core";
+import type { SupportedNetwork } from "@q402/core";
+import { NetworkConfigs } from "@q402/core";
 import type { NetworkClients } from "../../config/networks";
 
 /**

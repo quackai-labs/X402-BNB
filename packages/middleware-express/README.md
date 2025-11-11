@@ -1,18 +1,18 @@
-# @x402-bnb/middleware-express
+# @q402/middleware-express
 
-Express middleware for x402 BNB EIP-7702 delegated payment protocol.
+Express middleware for q402 EIP-7702 delegated payment protocol.
 
 ## Installation
 
 ```bash
-npm install @x402-bnb/middleware-express express viem
+npm install @q402/middleware-express express viem
 ```
 
 ## Usage
 
 ```typescript
 import express from "express";
-import { createX402BnbMiddleware } from "@x402-bnb/middleware-express";
+import { createQ402Middleware } from "@q402/middleware-express";
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { bscTestnet } from "viem/chains";
@@ -28,7 +28,7 @@ const walletClient = createWalletClient({
 });
 
 // Configure middleware
-const paymentMiddleware = createX402BnbMiddleware({
+const paymentMiddleware = createQ402Middleware({
   network: "bsc-testnet",
   recipientAddress: "0xYourAddress",
   implementationContract: "0xImplementation",

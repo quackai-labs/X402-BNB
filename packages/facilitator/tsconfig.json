@@ -2,14 +2,13 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "./src",
     "composite": false,
     "incremental": false,
     "skipLibCheck": true,
     "types": [],
     "paths": {
-      "@x402-bnb/core": ["../core/src/index.ts"],
-      "@x402-bnb/core/*": ["../core/src/*"]
+      "@q402/core": ["../core/src/index.ts"],
+      "@q402/core/*": ["../core/src/*"]
     }
   },
   "include": ["src/**/*"],

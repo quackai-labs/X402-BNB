@@ -1,5 +1,5 @@
 /**
- * x402 BNB Facilitator Service
+ * q402 Facilitator Service
  * 
  * A facilitator server for verifying and settling EIP-7702 delegated payments
  * on BSC and other EVM networks.
@@ -10,7 +10,7 @@ import { createNetworkClients } from "./config/networks";
 import { createServer } from "./api/server";
 
 async function main() {
-  console.log("Starting x402 BNB Facilitator...");
+  console.log("Starting q402 Facilitator...");
 
   // Load configuration
   const config = loadEnvConfig();

@@ -36,7 +36,7 @@ Verify a payment payload without submitting to blockchain.
     "maxTimeoutSeconds": 60,
     "asset": "0x55d398326f99059fF775485246999027B3197955",
     "extra": {
-      "name": "x402 BNB",
+      "name": "q402",
       "version": "1"
     }
   }

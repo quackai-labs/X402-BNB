@@ -1,7 +1,7 @@
 {
-  "name": "@x402-bnb/core",
+  "name": "@q402/core",
   "version": "0.1.0",
-  "description": "Core SDK for x402 BNB EIP-7702 delegated payment protocol",
+  "description": "Core SDK for q402 EIP-7702 delegated payment protocol",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

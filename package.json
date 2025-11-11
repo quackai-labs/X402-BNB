@@ -1,11 +1,11 @@
 {
-  "name": "x402-bnb",
+  "name": "q402",
   "version": "0.1.0",
   "private": true,
-  "description": "x402 BNB - EIP-7702 Delegated Payment Protocol for BSC and EVM networks",
+  "description": "q402 - EIP-7702 Delegated Payment Protocol for BSC and EVM networks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/quack-ai/x402-bnb.git"
+    "url": "https://github.com/quack-ai/q402.git"
   },
   "author": "Quack AI",
   "license": "Apache-2.0",

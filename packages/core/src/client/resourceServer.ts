@@ -1,5 +1,5 @@
 /**
- * Resource Server Helper for x402 BNB Protocol
+ * Resource Server Helper for q402 Protocol
  * 
  * Helper functions for resource servers implementing x402 payment flow
  */
@@ -123,7 +123,7 @@ export function createEip7702PaymentRequirement(
     maxTimeoutSeconds: 60,
     asset: tokenAddress,
     extra: {
-      name: "x402 BNB",
+      name: "q402",
       version: "1",
     },
   };

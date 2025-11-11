@@ -1,7 +1,7 @@
 import type { Context, Next, MiddlewareHandler } from "hono";
-import { decodeBase64, verifyPayment, settlePayment, encodeBase64 } from "@x402-bnb/core";
-import type { SignedPaymentPayload, PaymentExecutionResponse } from "@x402-bnb/core";
-import type { X402BnbMiddlewareConfig } from "./config";
+import { decodeBase64, verifyPayment, settlePayment, encodeBase64 } from "@q402/core";
+import type { SignedPaymentPayload, PaymentExecutionResponse } from "@q402/core";
+import type { Q402MiddlewareConfig } from "./config";
 import { send402Response } from "./handlers";
 
 /**
@@ -25,10 +25,10 @@ export interface PaymentContext {
 }
 
 /**
- * Create x402 BNB payment middleware for Hono
+ * Create q402 payment middleware for Hono
  */
-export function createX402BnbMiddleware(
-  config: X402BnbMiddlewareConfig,
+export function createQ402Middleware(
+  config: Q402MiddlewareConfig,
 ): MiddlewareHandler<{
   Variables: {
     payment?: PaymentContext;

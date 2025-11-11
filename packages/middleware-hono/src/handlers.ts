@@ -1,13 +1,13 @@
 import type { Context } from "hono";
-import type { PaymentRequiredResponse, PaymentDetails } from "@x402-bnb/core";
-import { PaymentScheme, NetworkConfigs } from "@x402-bnb/core";
-import type { PaymentEndpointConfig, X402BnbMiddlewareConfig } from "./config";
+import type { PaymentRequiredResponse, PaymentDetails } from "@q402/core";
+import { PaymentScheme, NetworkConfigs } from "@q402/core";
+import type { PaymentEndpointConfig, Q402MiddlewareConfig } from "./config";
 
 /**
  * Create 402 Payment Required response
  */
 export function create402Response(
-  config: X402BnbMiddlewareConfig,
+  config: Q402MiddlewareConfig,
   endpoint: PaymentEndpointConfig,
   c: Context,
 ): PaymentRequiredResponse {
@@ -22,7 +22,7 @@ export function create402Response(
     implementationContract: config.implementationContract,
     witness: {
       domain: {
-        name: "x402 BNB",
+        name: "q402",
         version: "1",
         chainId: networkConfig.chainId,
         verifyingContract: config.verifyingContract,
@@ -69,7 +69,7 @@ export function create402Response(
  */
 export function send402Response(
   c: Context,
-  config: X402BnbMiddlewareConfig,
+  config: Q402MiddlewareConfig,
   endpoint: PaymentEndpointConfig,
 ): Response {
   const response = create402Response(config, endpoint, c);

@@ -24,7 +24,7 @@ export async function createPaymentHeader(
 
   // Create domain from payment details
   const domain: Eip712Domain = {
-    name: "x402 BNB",
+    name: "q402",
     version: "1",
     chainId: paymentDetails.authorization.chainId,
     verifyingContract: paymentDetails.authorization.address,
@@ -75,7 +75,7 @@ export async function createPaymentHeaderWithWallet(
 
   // Create domain
   const domain: Eip712Domain = {
-    name: "x402 BNB",
+    name: "q402",
     version: "1",
     chainId: paymentDetails.authorization.chainId,
     verifyingContract: paymentDetails.authorization.address,

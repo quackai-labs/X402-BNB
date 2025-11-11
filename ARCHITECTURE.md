@@ -2,12 +2,12 @@
 
 ## Overview
 
-x402 BNB is a TypeScript implementation of a gasless payment protocol using EIP-7702 delegated execution on BSC and EVM networks. The architecture is designed as a modular monorepo with clear separation of concerns.
+q402 is a TypeScript implementation of a gasless payment protocol using EIP-7702 delegated execution on BSC and EVM networks. The architecture is designed as a modular monorepo with clear separation of concerns.
 
 ## Project Structure
 
 ```
-x402-bnb/
+q402/
 ├── packages/
 │   ├── core/                 # Core SDK
 │   ├── middleware-express/   # Express middleware
@@ -20,7 +20,7 @@ x402-bnb/
 
 ## Core Components
 
-### 1. Core SDK (@x402-bnb/core)
+### 1. Core SDK (@q402/core)
 
 The foundation of the protocol, providing:
 
@@ -54,7 +54,7 @@ The foundation of the protocol, providing:
 - `contracts/abi.ts` - Implementation contract ABIs
 - `contracts/addresses.ts` - Contract address registry
 
-### 2. Express Middleware (@x402-bnb/middleware-express)
+### 2. Express Middleware (@q402/middleware-express)
 
 HTTP middleware for Express.js applications:
 
@@ -70,7 +70,7 @@ HTTP middleware for Express.js applications:
 - Request object extension with payment info
 - X-PAYMENT-RESPONSE header generation
 
-### 3. Hono Middleware (@x402-bnb/middleware-hono)
+### 3. Hono Middleware (@q402/middleware-hono)
 
 HTTP middleware for Hono framework:
 
@@ -84,7 +84,7 @@ HTTP middleware for Hono framework:
 - Hono context integration
 - Type-safe with Hono's type system
 
-### 4. Facilitator Service (@x402-bnb/facilitator)
+### 4. Facilitator Service (@q402/facilitator)
 
 Standalone verification and settlement service:
 
@@ -160,7 +160,7 @@ Standalone verification and settlement service:
 
 ```typescript
 Domain:
-  name: "x402 BNB"
+    name: "q402"
   version: "1"
   chainId: 56 (or 97)
   verifyingContract: <verifier address>

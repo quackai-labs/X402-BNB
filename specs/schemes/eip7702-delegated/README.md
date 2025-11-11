@@ -71,7 +71,7 @@ interface WitnessMessage {
 
 ```typescript
 interface EIP712Domain {
-  name: "x402 BNB";
+    name: "q402";
   version: "1";
   chainId: number;
   verifyingContract: Hex;          // Implementation contract address

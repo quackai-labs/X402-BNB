@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import type { SignedPaymentPayload } from "@x402-bnb/core";
-import { SignedPaymentPayloadSchema } from "@x402-bnb/core";
+import type { SignedPaymentPayload } from "@q402/core";
+import { SignedPaymentPayloadSchema } from "@q402/core";
 import { verifyPaymentWithChecks } from "../../services/verification";
 import type { EnvConfig } from "../../config/env";
 
@@ -15,7 +15,11 @@ export async function handleVerify(
 ): Promise<void> {
   try {
     // Validate request body
+
+    console.log("/verify go req body", req.body);
+
     const parseResult = SignedPaymentPayloadSchema.safeParse(req.body);
+
 
     if (!parseResult.success) {
       res.status(400).json({
@@ -29,6 +33,8 @@ export async function handleVerify(
 
     // Verify payment
     const result = await verifyPaymentWithChecks(payload, config);
+
+    console.log("/verify go result", result);
 
     res.json(result);
   } catch (error) {

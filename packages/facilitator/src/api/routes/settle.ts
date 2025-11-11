@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import type { SignedPaymentPayload, SupportedNetwork } from "@x402-bnb/core";
-import { SignedPaymentPayloadSchema } from "@x402-bnb/core";
+import type { SignedPaymentPayload, SupportedNetwork } from "@q402/core";
+import { SignedPaymentPayloadSchema } from "@q402/core";
 import { settlePaymentWithMonitoring } from "../../services/settlement";
 import { getNetworkClients, type NetworkClients } from "../../config/networks";
 

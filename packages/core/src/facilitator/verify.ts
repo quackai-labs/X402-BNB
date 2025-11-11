@@ -16,7 +16,7 @@ export async function verifyPayment(
 
     // Step 1: Recover witness signer
     const witnessDomain = {
-      name: "x402 BNB",
+      name: "q402",
       version: "1",
       chainId: paymentDetails.authorization.chainId,
       verifyingContract: paymentDetails.authorization.address,

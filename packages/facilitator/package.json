@@ -1,11 +1,11 @@
 {
-  "name": "@x402-bnb/facilitator",
+  "name": "@q402/facilitator",
   "version": "0.1.0",
-  "description": "Facilitator service for x402 BNB EIP-7702 delegated payment protocol",
+  "description": "Facilitator service for q402 EIP-7702 delegated payment protocol",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "x402-bnb-facilitator": "./dist/index.js"
+    "q402-facilitator": "./dist/index.js"
   },
   "files": [
     "dist",
@@ -28,7 +28,7 @@
   "author": "Quack AI",
   "license": "Apache-2.0",
   "dependencies": {
-    "@x402-bnb/core": "workspace:*",
+    "@q402/core": "workspace:*",
     "dotenv": "^16.4.5",
     "ethers": "^6.15.0",
     "express": "^4.18.2",

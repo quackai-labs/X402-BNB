@@ -1,18 +1,18 @@
-# @x402-bnb/middleware-hono
+# @q402/middleware-hono
 
-Hono middleware for x402 BNB EIP-7702 delegated payment protocol.
+Hono middleware for q402 EIP-7702 delegated payment protocol.
 
 ## Installation
 
 ```bash
-npm install @x402-bnb/middleware-hono hono viem
+npm install @q402/middleware-hono hono viem
 ```
 
 ## Usage
 
 ```typescript
 import { Hono } from "hono";
-import { createX402BnbMiddleware } from "@x402-bnb/middleware-hono";
+import { createQ402Middleware } from "@q402/middleware-hono";
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { bscTestnet } from "viem/chains";
@@ -28,7 +28,7 @@ const walletClient = createWalletClient({
 });
 
 // Configure middleware
-const paymentMiddleware = createX402BnbMiddleware({
+const paymentMiddleware = createQ402Middleware({
   network: "bsc-testnet",
   recipientAddress: "0xYourAddress",
   implementationContract: "0xImplementation",
@@ -110,7 +110,7 @@ After successful payment verification, `c.get("payment")` contains:
 ## TypeScript Types
 
 ```typescript
-import type { PaymentContext } from "@x402-bnb/middleware-hono";
+import type { PaymentContext } from "@q402/middleware-hono";
 
 app.get("/api/premium", (c: Context<{ Variables: { payment?: PaymentContext } }>) => {
   const payment = c.get("payment");

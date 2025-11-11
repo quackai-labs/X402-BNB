@@ -1,7 +1,7 @@
 {
-  "name": "@x402-bnb/middleware-express",
+  "name": "@q402/middleware-express",
   "version": "0.1.0",
-  "description": "Express middleware for x402 BNB EIP-7702 delegated payment protocol",
+  "description": "Express middleware for q402 EIP-7702 delegated payment protocol",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -31,7 +31,7 @@
   "author": "Quack AI",
   "license": "Apache-2.0",
   "dependencies": {
-    "@x402-bnb/core": "workspace:*",
+    "@q402/core": "workspace:*",
     "viem": "^2.21.26"
   },
   "devDependencies": {

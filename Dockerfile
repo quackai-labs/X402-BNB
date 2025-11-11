@@ -1,4 +1,4 @@
-# Multi-stage Dockerfile for x402 BNB
+# Multi-stage Dockerfile for q402
 
 # Stage 1: Dependencies
 FROM node:18-alpine AS deps
@@ -100,6 +100,6 @@ USER nodejs
 
 EXPOSE 3000
 
-CMD ["pnpm", "--filter", "x402-bnb-bsc-testnet-example", "run", "server:express"]
+CMD ["pnpm", "--filter", "q402-bsc-testnet-example", "run", "server:express"]
 
 

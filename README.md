@@ -1,4 +1,4 @@
-# x402 BNB - EIP-7702 Delegated Payment Protocol
+# q402 - EIP-7702 Delegated Payment Protocol
 
 > 🚀 **Future-Ready Implementation**: This project is a complete, production-grade implementation of EIP-7702 delegated execution for gasless payments on BSC and EVM networks. 
 >
@@ -10,9 +10,9 @@ A next-generation gasless payment protocol using EIP-7702 delegated execution. B
 
 **Inspired by the [x402 protocol](https://github.com/coinbase/x402)** - we extend the vision with EIP-7702's revolutionary approach.
 
-## What is x402 BNB?
+## What is q402?
 
-x402 BNB uses EIP-7702's "user context push" to replace traditional ERC-20 allowance "pull" flow:
+q402 uses EIP-7702's "user context push" to replace traditional ERC-20 allowance "pull" flow:
 
 - **Users sign offline**: One EIP-7702 authorization tuple + one EIP-712 payment witness
 - **Facilitator sponsors gas**: Submits type 0x04 (set-code) transaction on behalf of users
@@ -29,9 +29,9 @@ This protocol prioritizes BSC and theoretically supports all EIP-7702 enabled EV
 - **Strong Witness Binding**: Domain separation, order/resource context binding
 - **Facilitator Role**: Stateless verification + settlement + observability
 
-## Why x402 BNB?
+## Why q402?
 
-Traditional x402 requires ERC-3009 support, limiting token compatibility. x402 BNB eliminates this:
+Traditional x402 requires ERC-3009 support, limiting token compatibility. q402 eliminates this:
 
 - ✅ Works with **any existing ERC-20** on BSC (no token upgrades)
 - ✅ **No initial approval** transaction needed
@@ -41,21 +41,21 @@ Traditional x402 requires ERC-3009 support, limiting token compatibility. x402 B
 
 ## Architecture Overview
 
-x402 BNB consists of four main components working together:
+q402 consists of four main components working together:
 
 ```mermaid
 graph TB
     subgraph "Client Application"
-        Client[Client SDK<br/>@x402-bnb/core]
+        Client[Client SDK<br/>@q402/core]
     end
     
     subgraph "Resource Server"
         Server[Express/Hono Server]
-        Middleware[Middleware<br/>@x402-bnb/middleware-express<br/>@x402-bnb/middleware-hono]
+        Middleware[Middleware<br/>@q402/middleware-express<br/>@q402/middleware-hono]
     end
     
     subgraph "Facilitator Service"
-        Facilitator[Facilitator API<br/>@x402-bnb/facilitator]
+        Facilitator[Facilitator API<br/>@q402/facilitator]
         Verify[Verification Service]
         Settle[Settlement Service]
     end
@@ -314,7 +314,7 @@ pnpm install
 #### 1. Client-Side Payment Creation
 
 ```typescript
-import { createPaymentHeader, selectPaymentDetails } from "@x402-bnb/core";
+import { createPaymentHeader, selectPaymentDetails } from "@q402/core";
 import { privateKeyToAccount } from "viem/accounts";
 
 // Create account
@@ -344,7 +344,7 @@ const result = await fetch("https://api.example.com/resource", {
 
 ```typescript
 import express from "express";
-import { createX402BnbMiddleware } from "@x402-bnb/middleware-express";
+import { createQ402Middleware } from "@q402/middleware-express";
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { bscTestnet } from "viem/chains";
@@ -359,9 +359,9 @@ const walletClient = createWalletClient({
   transport: http(),
 });
 
-// Apply x402 BNB middleware
+// Apply q402 middleware
 app.use(
-  createX402BnbMiddleware({
+  createQ402Middleware({
     network: "bsc-testnet",
     recipientAddress: "0x...",
     implementationContract: "0x...",
@@ -455,7 +455,7 @@ graph TD
 ```json
 {
   "domain": {
-    "name": "x402 BNB",
+    "name": "q402",
     "version": "1",
     "chainId": 56,
     "verifyingContract": "0xServerVerifier"
@@ -573,10 +573,10 @@ IMPLEMENTATION_WHITELIST=0x...,0x...
 
 ## Packages
 
-- **[@x402-bnb/core](./packages/core)** - Core SDK with client functions and type definitions
-- **[@x402-bnb/facilitator](./packages/facilitator)** - Independent facilitator service
-- **[@x402-bnb/middleware-express](./packages/middleware-express)** - Express middleware
-- **[@x402-bnb/middleware-hono](./packages/middleware-hono)** - Hono middleware
+- **[@q402/core](./packages/core)** - Core SDK with client functions and type definitions
+- **[@q402/facilitator](./packages/facilitator)** - Independent facilitator service
+- **[@q402/middleware-express](./packages/middleware-express)** - Express middleware
+- **[@q402/middleware-hono](./packages/middleware-hono)** - Hono middleware
 
 ## Getting Started
 
@@ -605,14 +605,14 @@ For detailed documentation, see the [`docs/`](./docs/) folder:
 
 ## Acknowledgments
 
-This project implements the [x402 protocol](https://github.com/coinbase/x402) standard with EIP-7702 extensions. x402 BNB follows the official x402 specifications for:
+This project implements the [x402 protocol](https://github.com/coinbase/x402) standard with EIP-7702 extensions. q402 follows the official x402 specifications for:
 
 - **HTTP 402 semantics** - Standard Payment Required responses
 - **Header formats** - X-PAYMENT and X-PAYMENT-RESPONSE headers
 - **Facilitator API** - Standard /verify, /settle, /supported endpoints
 - **Client-server flow** - Compatible with any x402 implementation
 
-The x402 BNB implementation extends the standard with EIP-7702 delegated execution:
+The q402 implementation extends the standard with EIP-7702 delegated execution:
 - ✅ **Gasless payments** - Users never pay gas fees
 - ✅ **Universal ERC-20** - No token contract modifications needed
 - ✅ **No approvals** - Direct transfers without pre-approval
@@ -620,7 +620,7 @@ The x402 BNB implementation extends the standard with EIP-7702 delegated executi
 
 ## About Quack AI
 
-x402 BNB is developed by Quack AI to enhance governance execution and payment flows in decentralized ecosystems. Our governance scoring engine integrates directly with payment settlement for trusted, auditable proposal execution.
+q402 is developed by Quack AI to enhance governance execution and payment flows in decentralized ecosystems. Our governance scoring engine integrates directly with payment settlement for trusted, auditable proposal execution.
 
 For more information: [Quack AI Website](https://quackai.ai/)
 

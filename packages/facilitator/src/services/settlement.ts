@@ -1,6 +1,6 @@
-import type { SignedPaymentPayload, SettlementResult } from "@x402-bnb/core";
-import type { WitnessTypedData } from "@x402-bnb/core";
-import { PaymentScheme } from "@x402-bnb/core";
+import type { SignedPaymentPayload, SettlementResult } from "@q402/core";
+import type { WitnessTypedData } from "@q402/core";
+import { PaymentScheme } from "@q402/core";
 import { ethers } from "ethers";
 
 /**

@@ -1,5 +1,5 @@
 /**
- * x402 BNB - EIP-7702 Delegated Payment Protocol
+ * q402 - EIP-7702 Delegated Payment Protocol
  * 
  * A production-ready EIP-7702 delegated execution payment flow for BSC and EVM networks,
  * with gas sponsored by facilitators.

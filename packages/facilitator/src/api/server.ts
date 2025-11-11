@@ -1,6 +1,6 @@
 import express from "express";
 import type { Express } from "express";
-import type { SupportedNetwork } from "@x402-bnb/core";
+import type { SupportedNetwork } from "@q402/core";
 import type { EnvConfig } from "../config/env";
 import type { NetworkClients } from "../config/networks";
 import { handleVerify } from "./routes/verify";
@@ -36,7 +36,7 @@ export function createServer(
   // Routes
   app.get("/", (_req, res) => {
     res.json({
-      name: "x402 BNB Facilitator",
+      name: "q402 Facilitator",
       version: "0.1.0",
       endpoints: {
         verify: "POST /verify",

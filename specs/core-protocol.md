@@ -1,8 +1,8 @@
-# x402 BNB Core Protocol Specification
+# q402 Core Protocol Specification
 
 ## Overview
 
-x402 BNB implements the [x402 payments protocol](https://github.com/coinbase/x402) with EIP-7702 delegated execution for gasless payments on BSC and EVM networks.
+q402 implements the [x402 payments protocol](https://github.com/coinbase/x402) with EIP-7702 delegated execution for gasless payments on BSC and EVM networks.
 
 ## Protocol Components
 

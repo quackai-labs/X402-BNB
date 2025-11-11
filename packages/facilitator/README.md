@@ -1,17 +1,17 @@
-# @x402-bnb/facilitator
+# @q402/facilitator
 
-Facilitator service for x402 BNB - handles payment verification and settlement.
+Facilitator service for q402 - handles payment verification and settlement.
 
 ## Installation
 
 ```bash
-npm install @x402-bnb/facilitator
+npm install @q402/facilitator
 ```
 
 Or run directly:
 
 ```bash
-npx @x402-bnb/facilitator
+npx @q402/facilitator
 ```
 
 ## Configuration

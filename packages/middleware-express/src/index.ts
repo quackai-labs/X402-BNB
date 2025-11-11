@@ -1,5 +1,5 @@
 /**
- * Express middleware for x402 BNB EIP-7702 delegated payment protocol
+ * Express middleware for q402 EIP-7702 delegated payment protocol
  * 
  * @packageDocumentation
  */

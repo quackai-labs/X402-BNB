@@ -1,6 +1,6 @@
-import type { SignedPaymentPayload, VerificationResult } from "@x402-bnb/core";
+import type { SignedPaymentPayload, VerificationResult } from "@q402/core";
 import type { EnvConfig } from "../config/env";
-import { ErrorReason } from "@x402-bnb/core";
+import { ErrorReason } from "@q402/core";
 
 /**
  * Verify a payment with additional checks
@@ -11,17 +11,25 @@ export async function verifyPaymentWithChecks(
 ): Promise<VerificationResult> {
   // Check implementation contract is whitelisted
   if (config.implementationWhitelist.length > 0) {
+    const implementationContract = payload.paymentDetails.implementationContract.toLowerCase();
     const isWhitelisted = config.implementationWhitelist.some(
-      (addr) =>
-        addr.toLowerCase() === payload.paymentDetails.implementationContract.toLowerCase(),
+      (addr) => addr.toLowerCase() === implementationContract,
     );
 
+    console.log(`🔍 Checking implementation whitelist:`);
+    console.log(`   Contract: ${implementationContract}`);
+    console.log(`   Whitelist: ${config.implementationWhitelist.map(a => a.toLowerCase()).join(", ")}`);
+    console.log(`   Is whitelisted: ${isWhitelisted}`);
+
     if (!isWhitelisted) {
+      console.error(`❌ Implementation contract ${implementationContract} is not in whitelist`);
       return {
         isValid: false,
         invalidReason: ErrorReason.INVALID_IMPLEMENTATION,
       };
     }
+  } else {
+    console.log(`ℹ️  Implementation whitelist is empty, skipping whitelist check`);
   }
 
   // Perform standard verification using local function

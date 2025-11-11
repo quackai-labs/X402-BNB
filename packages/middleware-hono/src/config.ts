@@ -1,5 +1,5 @@
 import type { Address, WalletClient } from "viem";
-import type { SupportedNetwork } from "@x402-bnb/core";
+import type { SupportedNetwork } from "@q402/core";
 
 /**
  * Payment endpoint configuration
@@ -34,7 +34,7 @@ export interface PaymentEndpointConfig {
 /**
  * Middleware configuration
  */
-export interface X402BnbMiddlewareConfig {
+export interface Q402MiddlewareConfig {
   /**
    * Network to use
    */

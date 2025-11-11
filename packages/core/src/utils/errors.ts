@@ -1,21 +1,21 @@
 /**
- * Base error class for x402 BNB errors
+ * Base error class for q402 errors
  */
-export class X402BnbError extends Error {
+export class Q402Error extends Error {
   constructor(
     message: string,
     public readonly code: string,
     public readonly details?: unknown,
   ) {
     super(message);
-    this.name = "X402BnbError";
+    this.name = "Q402Error";
   }
 }
 
 /**
  * Payment validation error
  */
-export class PaymentValidationError extends X402BnbError {
+export class PaymentValidationError extends Q402Error {
   constructor(message: string, details?: unknown) {
     super(message, "PAYMENT_VALIDATION_ERROR", details);
     this.name = "PaymentValidationError";
@@ -25,7 +25,7 @@ export class PaymentValidationError extends X402BnbError {
 /**
  * Signature error
  */
-export class SignatureError extends X402BnbError {
+export class SignatureError extends Q402Error {
   constructor(message: string, details?: unknown) {
     super(message, "SIGNATURE_ERROR", details);
     this.name = "SignatureError";
@@ -35,7 +35,7 @@ export class SignatureError extends X402BnbError {
 /**
  * Network error
  */
-export class NetworkError extends X402BnbError {
+export class NetworkError extends Q402Error {
   constructor(message: string, details?: unknown) {
     super(message, "NETWORK_ERROR", details);
     this.name = "NetworkError";
@@ -45,7 +45,7 @@ export class NetworkError extends X402BnbError {
 /**
  * Transaction error
  */
-export class TransactionError extends X402BnbError {
+export class TransactionError extends Q402Error {
   constructor(message: string, details?: unknown) {
     super(message, "TRANSACTION_ERROR", details);
     this.name = "TransactionError";

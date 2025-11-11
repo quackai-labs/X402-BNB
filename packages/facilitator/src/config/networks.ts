@@ -2,8 +2,8 @@ import { createWalletClient, createPublicClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { bsc, bscTestnet } from "viem/chains";
 import type { WalletClient, PublicClient } from "viem";
-import type { SupportedNetwork } from "@x402-bnb/core";
-import { SupportedNetworks } from "@x402-bnb/core";
+import type { SupportedNetwork } from "@q402/core";
+import { SupportedNetworks } from "@q402/core";
 import type { EnvConfig } from "./env";
 
 /**
